@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Unreal Projects\\CPPGameplay\\Source\\CPPGameplay\\CPPGameplay.Build.cs",
+		"E:\\Unreal Projects\\CPPGameplay\\Source\\CPPGameplay.Target.cs",
+		"E:\\Unreal Projects\\CPPGameplay\\Source\\CPPGameplayEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}

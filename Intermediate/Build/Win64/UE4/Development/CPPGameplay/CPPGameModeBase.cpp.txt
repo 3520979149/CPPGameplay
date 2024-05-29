@@ -1,0 +1,10 @@
+E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4\Development\CPPGameplay\Definitions.CPPGameplay.h
+E:\Unreal Projects\CPPGameplay\Source\CPPGameplay\Public\CPPGameModeBase.h
+E:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+E:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+E:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\ServerStatReplicator.generated.h
+E:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\GameModeBase.generated.h
+E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4\Inc\CPPGameplay\CPPGameModeBase.generated.h
+E:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\EngineUtils.h
+E:\Unreal Projects\CPPGameplay\Source\CPPGameplay\Public\GameCube.h
+E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4\Inc\CPPGameplay\GameCube.generated.h

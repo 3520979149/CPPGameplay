@@ -1,0 +1,2 @@
+E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4\Development\CPPGameplay\Definitions.CPPGameplay.h
+E:\Unreal Projects\CPPGameplay\Source\CPPGameplay\CPPGameplay.h

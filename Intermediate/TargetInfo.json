@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "CPPGameplay",
+			"Path": "E:\\Unreal Projects\\CPPGameplay\\Source\\CPPGameplay.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "CPPGameplayEditor",
+			"Path": "E:\\Unreal Projects\\CPPGameplay\\Source\\CPPGameplayEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

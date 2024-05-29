@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\CPPGameplay.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{AC17FB8C-1606-4D89-9E76-3AC516D991DE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CPPGameplay.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CPPGameplayEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{82581158-9E9A-49BA-9514-66D2987C54EC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CPPGameplay">
+      <UniqueIdentifier>{98ACFD55-B46F-4EFE-8DA0-73AAFE2AFDD2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CPPGameplay\CPPGameplay.Build.cs">
+      <Filter>Source\CPPGameplay</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CPPGameplay\CPPGameplay.cpp">
+      <Filter>Source\CPPGameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CPPGameplay\CPPGameplay.h">
+      <Filter>Source\CPPGameplay</Filter>
+    </ClInclude>
+    <Filter Include="Source\CPPGameplay\Private">
+      <UniqueIdentifier>{1A417358-493A-4FFB-B46C-0B153E9BCCA6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\CPPGameplay\Private\CPPGameModeBase.cpp">
+      <Filter>Source\CPPGameplay\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CPPGameplay\Private\FirstPersonCharacter.cpp">
+      <Filter>Source\CPPGameplay\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CPPGameplay\Private\GameCube.cpp">
+      <Filter>Source\CPPGameplay\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\CPPGameplay\Public">
+      <UniqueIdentifier>{6E079605-6378-4ED7-8482-FD92334D043E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\CPPGameplay\Public\CPPGameModeBase.h">
+      <Filter>Source\CPPGameplay\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CPPGameplay\Public\CustomMacros.h">
+      <Filter>Source\CPPGameplay\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CPPGameplay\Public\FirstPersonCharacter.h">
+      <Filter>Source\CPPGameplay\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CPPGameplay\Public\GameCube.h">
+      <Filter>Source\CPPGameplay\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
