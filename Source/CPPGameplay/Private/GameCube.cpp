@@ -3,6 +3,7 @@
 
 #include "GameCube.h"
 #include"Kismet/KismetMathLibrary.h"
+#include"Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 AGameCube::AGameCube()
@@ -45,18 +46,57 @@ void AGameCube::Tick(float DeltaTime)
 	CubeMatDynamic->SetVectorParameterValue(TEXT("Color"), CurrentColor);
 }
 
-void AGameCube::SetColor(FLinearColor NewChangeColor,int Index)
+void AGameCube::SetColor(FLinearColor NewChangeColor, int Index)
 {
+	//将传过来的颜色更改到要改变的颜色上
 	ChangedColor = NewChangeColor;
 	ColorIndex = Index;
 }
 
+void AGameCube::Eliminate()
+{
+	DisplayEliminateFX();
+	//消除方块
+	Destroy();
+}
+
+void AGameCube::Recover()
+{
+	//颜色还原的时候，使方块可以被再次点击
+	bBeenShot = false;
+	//调用定时器，绑定定时执行的函数
+	FTimerDynamicDelegate Delegate;
+	Delegate.BindUFunction(this, TEXT("DelayRecover"));
+	GetWorld()->GetTimerManager().SetTimer(DalayRecoverHandle, Delegate, .5f, false);
+
+}
+
+void AGameCube::DelayRecover()
+{
+	//颜色恢复
+	TargetColor = OriginColor;
+}
+
 float AGameCube::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	//每收到伤害就取反
-	bBeenShot = !bBeenShot;
-	//每受到伤害根据上面的bool值进行颜色切换，达到来回切换的功能
-	TargetColor = bBeenShot ? ChangedColor : OriginColor;
-	return Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	auto Ret = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//已经点过一次后就不能再点击了
+	if (bBeenShot)return Ret;
+	//第一次受到伤害设置为true，防止重复点击
+	bBeenShot = true;
+	//每受到伤害就进行颜色切换
+	TargetColor = ChangedColor;
+	//得到定时器引用
+	auto& Manager = GetWorld()->GetTimerManager();
+
+	if (DalayRecoverHandle.IsValid() && Manager.GetTimerRemaining(DalayRecoverHandle) > 0.f)//判断是否（定时器句柄有效和剩余时间大于0）需要停止定时器（还原颜色）
+	{
+		//停止定时器
+		Manager.ClearTimer(DalayRecoverHandle);
+	}
+	//调用委托（开始事件派发）
+	OnCubeBeenHit.Broadcast(this);
+
+	return Ret;
 }
 

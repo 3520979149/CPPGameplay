@@ -34,7 +34,7 @@ void AFirstPersonCharacter::BeginPlay()
 			//加载完成之后赋值给资产变量 GetLoadedAsset：获取加载资产
 			ShootFX = Cast<UNiagaraSystem>(Handle->GetLoadedAsset());
 		}).Get();
-		PRINT(TEXT("BeginEnd"));
+		
 
 }
 
@@ -82,11 +82,6 @@ void AFirstPersonCharacter::Shoot()
 		BeamEnd = OutHit.Location;
 		//通过内置伤害系统，达到事件派发的效果，实现击打变色。
 		UGameplayStatics::ApplyDamage(OutHit.GetActor(), 1.f, GetController(), this, 0);
-
-		if (auto Cube = Cast<AGameCube>(OutHit.GetActor()))
-		{
-
-		}
 	}
 
 	if (IsValid(ShootFX))

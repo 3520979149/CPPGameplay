@@ -18,8 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 	CPPGAMEPLAY_API UClass* Z_Construct_UClass_ACPPGameModeBase_NoRegister();
 	CPPGAMEPLAY_API UClass* Z_Construct_UClass_ACPPGameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	CPPGAMEPLAY_API UClass* Z_Construct_UClass_AGameCube_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 // End Cross Module References
 	static UEnum* EGameDifficulty_StaticEnum()
@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 		return EGameDifficulty_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EGameDifficulty(EGameDifficulty_StaticEnum, TEXT("/Script/CPPGameplay"), TEXT("EGameDifficulty"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_CPPGameplay_EGameDifficulty_Hash() { return 2885319775U; }
+	uint32 Get_Z_Construct_UEnum_CPPGameplay_EGameDifficulty_Hash() { return 2772841894U; }
 	UEnum* Z_Construct_UEnum_CPPGameplay_EGameDifficulty()
 	{
 #if WITH_HOT_RELOAD
@@ -55,10 +55,18 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
+				{ "Comment", "/// <summary>\n/// ???\xd7\xb3\xcc\xb6?\xc3\xb6??????\n/// </summary>\n" },
+				{ "Easy.Comment", "/// <summary>\n/// ????\n/// </summary>\n" },
 				{ "Easy.Name", "EGameDifficulty::Easy" },
+				{ "Easy.ToolTip", "<summary>\n????\n</summary>" },
+				{ "Hard.Comment", "/// <summary>\n/// ????\n/// </summary>\n" },
 				{ "Hard.Name", "EGameDifficulty::Hard" },
+				{ "Hard.ToolTip", "<summary>\n????\n</summary>" },
+				{ "Medium.Comment", "/// <summary>\n/// ?\xd0\xb5?\n/// </summary>\n" },
 				{ "Medium.Name", "EGameDifficulty::Medium" },
+				{ "Medium.ToolTip", "<summary>\n?\xd0\xb5?\n</summary>" },
 				{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
+				{ "ToolTip", "<summary>\n???\xd7\xb3\xcc\xb6?\xc3\xb6??????\n</summary>" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -78,8 +86,55 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(ACPPGameModeBase::execHandleCubeBeenHit)
+	{
+		P_GET_OBJECT(AGameCube,Z_Param_HitCube);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->HandleCubeBeenHit(Z_Param_HitCube);
+		P_NATIVE_END;
+	}
 	void ACPPGameModeBase::StaticRegisterNativesACPPGameModeBase()
 	{
+		UClass* Class = ACPPGameModeBase::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "HandleCubeBeenHit", &ACPPGameModeBase::execHandleCubeBeenHit },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics
+	{
+		struct CPPGameModeBase_eventHandleCubeBeenHit_Parms
+		{
+			AGameCube* HitCube;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HitCube;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::NewProp_HitCube = { "HitCube", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CPPGameModeBase_eventHandleCubeBeenHit_Parms, HitCube), Z_Construct_UClass_AGameCube_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::NewProp_HitCube,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/// <summary>\n/// ?????????\xd0\xb5\xc4\xb7????\xc7\xb7??????????\xc7\xbb\xd6\xb8?\xd4\xad??\n/// </summary>\n/// <param name=\"HitCube\">?????\xd0\xb5\xc4\xb7?????\xd6\xb8??</param>\n" },
+		{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
+		{ "ToolTip", "<summary>\n?????????\xd0\xb5\xc4\xb7????\xc7\xb7??????????\xc7\xbb\xd6\xb8?\xd4\xad??\n</summary>\n<param name=\"HitCube\">?????\xd0\xb5\xc4\xb7?????\xd6\xb8??</param>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPPGameModeBase, nullptr, "HandleCubeBeenHit", nullptr, nullptr, sizeof(CPPGameModeBase_eventHandleCubeBeenHit_Parms), Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ACPPGameModeBase_NoRegister()
 	{
@@ -88,6 +143,7 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 	struct Z_Construct_UClass_ACPPGameModeBase_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -117,6 +173,9 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_CPPGameplay,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ACPPGameModeBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACPPGameModeBase_HandleCubeBeenHit, "HandleCubeBeenHit" }, // 671997092
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPPGameModeBase_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n *\n */" },
@@ -130,23 +189,27 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_DefaultDifficulty_MetaData[] = {
 		{ "Category", "CPPGameModeBase" },
+		{ "Comment", "/// <summary>\n/// ?\xd1\xb6\xc8\xb5\xc8\xbc?????\n/// </summary>\n" },
 		{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
+		{ "ToolTip", "<summary>\n?\xd1\xb6\xc8\xb5\xc8\xbc?????\n</summary>" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_DefaultDifficulty = { "DefaultDifficulty", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPPGameModeBase, DefaultDifficulty), Z_Construct_UEnum_CPPGameplay_EGameDifficulty, METADATA_PARAMS(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_DefaultDifficulty_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_DefaultDifficulty_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_GameCubeClass_MetaData[] = {
 		{ "Category", "CPPGameModeBase" },
+		{ "Comment", "/// <summary>\n/// ???\xd3\xb5??\xd3\xb6???\n/// </summary>\n" },
 		{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
+		{ "ToolTip", "<summary>\n???\xd3\xb5??\xd3\xb6???\n</summary>" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_GameCubeClass = { "GameCubeClass", nullptr, (EPropertyFlags)0x0044000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPPGameModeBase, GameCubeClass), Z_Construct_UClass_AGameCube_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_GameCubeClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_GameCubeClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_SpawnSpace_MetaData[] = {
 		{ "Category", "CPPGameModeBase" },
-		{ "Comment", "//???????\xc4\xbc???\n" },
+		{ "Comment", "/// <summary>\n/// ???\xd3\xbc??\xc4\xbc???\n/// </summary>\n" },
 		{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
-		{ "ToolTip", "???????\xc4\xbc???" },
+		{ "ToolTip", "<summary>\n???\xd3\xbc??\xc4\xbc???\n</summary>" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_SpawnSpace = { "SpawnSpace", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPPGameModeBase, SpawnSpace), METADATA_PARAMS(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_SpawnSpace_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_SpawnSpace_MetaData)) };
@@ -154,7 +217,9 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_CubeColors_MetaData[] = {
 		{ "Category", "CPPGameModeBase" },
+		{ "Comment", "/// <summary>\n/// ??????FLinearColor???\xcd\xb6???????\n/// </summary>\n" },
 		{ "ModuleRelativePath", "Public/CPPGameModeBase.h" },
+		{ "ToolTip", "<summary>\n??????FLinearColor???\xcd\xb6???????\n</summary>" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_CubeColors = { "CubeColors", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPPGameModeBase, CubeColors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_CubeColors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPPGameModeBase_Statics::NewProp_CubeColors_MetaData)) };
@@ -174,11 +239,11 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ACPPGameModeBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACPPGameModeBase_Statics::PropPointers),
 		0,
 		0x009002ACu,
@@ -193,7 +258,7 @@ void EmptyLinkFunctionForGeneratedCodeCPPGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACPPGameModeBase, 2927993771);
+	IMPLEMENT_CLASS(ACPPGameModeBase, 522087592);
 	template<> CPPGAMEPLAY_API UClass* StaticClass<ACPPGameModeBase>()
 	{
 		return ACPPGameModeBase::StaticClass();

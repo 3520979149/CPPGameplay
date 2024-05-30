@@ -1,0 +1,20 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-CPPGameplay-0773.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\CPPGameplayEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\CPPGameModeBase.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\FirstPersonCharacter.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\GameCube.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\CPPGameplay.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\CPPGameModeBase.gen.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\CPPGameplay.init.gen.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\FirstPersonCharacter.gen.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\GameCube.gen.cpp.obj"
+"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\Default.rc2.res"
+/OUT:"E:\Unreal Projects\CPPGameplay\Intermediate\Build\Win64\UE4Editor\Development\CPPGameplay\UE4Editor-CPPGameplay-0773.lib"
+/INCLUDE:IMPLEMENT_MODULE_CPPGameplay
